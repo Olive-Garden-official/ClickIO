@@ -52,15 +52,15 @@
 
             });
         }
-    database.child("000000001").child("clickBool").get().then((snapshot) => {
-  if (snapshot.exists()) {
-    console.log(snapshot.val());
-  } else {
-    console.log("No data available");
-  }
-}).catch((error) => {
-  console.error(error);
-});
+        database.child("000000001/clickBool").get().then((snapshot) => {
+            if (snapshot.exists()) {
+                console.log(snapshot.val());
+            } else {
+                console.log("No data available");
+            }
+        }).catch((error) => {
+            console.error(error);
+        });
         console.log(firebase.database().ref(deviceID).get(clickBool))
     </script>
 
