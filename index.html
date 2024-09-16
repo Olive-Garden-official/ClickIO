@@ -43,7 +43,7 @@
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
-        var database = firebase.database();
+        var database = firebase.database().ref();
         function clickEvent() {
             console.log("click event");
             event.preventDefault();
