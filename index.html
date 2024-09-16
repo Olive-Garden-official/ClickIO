@@ -33,8 +33,8 @@
     </div>
 
     <script>
-        var MY_APIKEY = config.MY_APIKEY
-        var MY_DATABASEURL = config.MY_DATABASEURL
+        var MY_APIKEY = process.env.MY_APIKEY
+        var MY_DATABASEURL = process.env.MY_DATABASEURL
         var deviceID = "000000001"
         var firebaseConfig = {
             apiKey: MY_APIKEY,
