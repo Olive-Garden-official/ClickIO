@@ -7,7 +7,7 @@ export default async (request, context) => {
 
 };
 
-require('dotenv').config()
+import('dotenv').config()
 
 var deviceID = "000000001"
 var firebaseConfig = {
