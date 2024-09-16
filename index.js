@@ -1,10 +1,10 @@
-require('dotenv').config()
 
 var MY_APIKEY
 var MY_DATABASEURL
 export default async (request, context) => {
     MY_APIKEY = Netlify.env.get("MY_APIKEY");
     MY_DATABASEURL = Netlify.env.get("MY_DATABASEURL");
+    require('dotenv').config()
 
 };
 
