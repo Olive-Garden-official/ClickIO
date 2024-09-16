@@ -25,3 +25,7 @@ function clickEvent() {
     // var button = document.getElementById('#myButton');
     // button.setAttribute('disabled', '');
 }
+
+window.increment = increment
+window.save = save
+window.reset = reset
