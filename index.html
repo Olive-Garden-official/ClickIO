@@ -45,7 +45,6 @@
         firebase.initializeApp(firebaseConfig);
         var database = firebase.database().ref();
         function clickEvent() {
-            console.log(firebase.database().ref("000000001/clickBool"))
             console.log("click event");
             event.preventDefault();
             firebase.database().ref(deviceID).set({
@@ -53,6 +52,7 @@
 
             });
         }
+                    
     </script>
 
     <!-- Optional JavaScript -->
