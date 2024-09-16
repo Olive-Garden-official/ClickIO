@@ -4,16 +4,16 @@ var MY_DATABASEURL
 // require('dotenv').config()
 
 // export default async (request, context) => {
-    MY_APIKEY = Netlify.env.get("MY_APIKEY");
-    MY_DATABASEURL = Netlify.env.get("MY_DATABASEURL");
+//     MY_APIKEY = Netlify.env.get("MY_APIKEY");
+//     MY_DATABASEURL = Netlify.env.get("MY_DATABASEURL");
 
-// };
+// // };
 
 
 var deviceID = "000000001"
 var firebaseConfig = {
-    apiKey: MY_APIKEY,
-    databaseURL: MY_DATABASEURL,
+    // apiKey: MY_APIKEY,
+    databaseURL: "https://clicker-io-50ccb-default-rtdb.firebaseio.com/",
     projectId: "clicker-io-64f27"
 };
 // Initialize Firebase
