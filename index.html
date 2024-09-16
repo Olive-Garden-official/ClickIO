@@ -33,15 +33,18 @@
     </div>
 
     <script>
-        var MY_APIKEY = process.env.MY_APIKEY
-        var MY_DATABASEURL = process.env.MY_DATABASEURL
+        exports.handler = async function (event, context) {
+            const MY_APIKEY = process.env.MY_APIKEY;
+            const MY_DATABASEURL = process.env.MY_DATABASEURL;
+
+
+        };
         var deviceID = "000000001"
         var firebaseConfig = {
             apiKey: MY_APIKEY,
             databaseURL: MY_DATABASEURL,
             projectId: "clicker-io-64f27"
         };
-
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
         var database = firebase.database();
