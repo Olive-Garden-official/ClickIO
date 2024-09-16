@@ -52,7 +52,7 @@
 
             });
         }
-        database.child("000000001/clickBool").get().then((snapshot) => {
+        database.get("000000001/clickBool").then((snapshot) => {
             if (snapshot.exists()) {
                 console.log(snapshot.val());
             } else {
