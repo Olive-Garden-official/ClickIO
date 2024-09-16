@@ -34,7 +34,6 @@
         </div>
     </div>
     <script>
-        const dbRef = firebase.database().ref();
 
         var deviceID = "000000001"
         var firebaseConfig = {
@@ -53,7 +52,7 @@
 
             });
         }
-    dbRef.child("000000001").child(clickBool).get().then((snapshot) => {
+    database.child("000000001").child(clickBool).get().then((snapshot) => {
   if (snapshot.exists()) {
     console.log(snapshot.val());
   } else {
