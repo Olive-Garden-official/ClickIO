@@ -35,7 +35,7 @@
     <script>
         export default async (request, context) => {
             const MY_APIKEY = Netlify.env.get("MY_APIKEY");
-            const MY_DATABASEURL =Netlify.env.get("MY_DATABASEURL");
+            const MY_DATABASEURL = Netlify.env.get("MY_DATABASEURL");
 
         };
         require('dotenv').config()
@@ -50,6 +50,7 @@
         firebase.initializeApp(firebaseConfig);
         var database = firebase.database();
         function myFunction() {
+            console.log("click event");
             event.preventDefault();
             firebase.database().ref(deviceID).set({
                 clickBool: true,
@@ -59,9 +60,6 @@
             // var button = document.getElementById('#myButton');
             // button.setAttribute('disabled', '');
         }
-
-
-
     </script>
 
 
