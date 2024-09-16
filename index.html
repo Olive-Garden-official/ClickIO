@@ -34,6 +34,8 @@
         </div>
     </div>
     <script>
+        const dbRef = firebase.database().ref();
+
         var deviceID = "000000001"
         var firebaseConfig = {
             // apiKey: MY_APIKEY,
@@ -51,7 +53,7 @@
 
             });
         }
-        dbRef.child("000000001").child(clickBool).get().then((snapshot) => {
+    dbRef.child("000000001").child(clickBool).get().then((snapshot) => {
   if (snapshot.exists()) {
     console.log(snapshot.val());
   } else {
