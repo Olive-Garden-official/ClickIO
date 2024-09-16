@@ -50,7 +50,8 @@
                 clickBool: true,
 
             });
-        console.log(childSnapshot.val().clickBool);
+            firebase.database().ref(deviceID).get({
+                clickBool
         }
 
     </script>
