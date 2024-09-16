@@ -5,7 +5,7 @@ export default async (request, context) => {
     MY_DATABASEURL = Netlify.env.get("MY_DATABASEURL");
 
 };
-require('dotenv').config()
+// require('dotenv').config()
 
 var deviceID = "000000001"
 var firebaseConfig = {
