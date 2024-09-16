@@ -33,7 +33,26 @@
             </div>
         </div>
     </div>
+<script>
+var deviceID = "000000001"
+var firebaseConfig = {
+    // apiKey: MY_APIKEY,
+    databaseURL: "https://clicker-io-50ccb-default-rtdb.firebaseio.com/",
+    projectId: "clicker-io-64f27"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+var database = firebase.database();
+function clickEvent() {
+    console.log("click event");
+    event.preventDefault();
+    firebase.database().ref(deviceID).set({
+        clickBool: true,
 
+    });
+
+
+</script>
     
 
 
