@@ -8,6 +8,7 @@
     <!-- firebase scripts -->
     <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
+    <script type='text/javascript' src='config.js'></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -32,10 +33,12 @@
     </div>
 
     <script>
+        var MY_APIKEY = config.MY_APIKEY
+        var MY_DATABASEURL = config.MY_DATABASEURL
         var deviceID = "000000001"
         var firebaseConfig = {
-            apiKey: "AIzaSyBKD8Hid2wNRPfJOuc_sNHcAphJ2qXPfNQ",
-            databaseURL: "https://clicker-io-64f27-default-rtdb.firebaseio.com/",
+            apiKey: MY_APIKEY,
+            databaseURL: MY_DATABASEURL,
             projectId: "clicker-io-64f27"
         };
 
