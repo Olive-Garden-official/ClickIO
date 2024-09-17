@@ -68,8 +68,8 @@
             firebase.database().ref(deviceID).set({
                 clickBool: true,
             });
-            firebase.database().ref("log").push({
-                lifetimeClicks:   firebase.database.ServerValue.increment(1)
+            firebase.database().ref('log').push({
+                lifetimeClicks:  increment(1)
             });
         }
 
