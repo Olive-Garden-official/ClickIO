@@ -33,6 +33,23 @@
             <div class="col-sm">
             </div>
         </div>
+        <div class="row">
+            <div class="col-sm">
+            </div>
+            <div class="col-sm">
+                <h1>OWO What's this?</h1>
+                <p>Hooked up to a microcontroller somewhere in the US is a large servo and a dog training clicker.<br>
+                    The servo is mounted on the clicker, so upon clicking the button, the servo will deliver a click to
+                    the user.<br>
+                    The user being a puppygirl of course.<br>
+                    <br>
+                </p>
+
+
+            </div>
+            <div class="col-sm">
+            </div>
+        </div>
     </div>
     <script>
 
@@ -50,10 +67,12 @@
             event.preventDefault();
             firebase.database().ref(deviceID).set({
                 clickBool: true,
-
+            });
+            firebase.database().ref(deviceID).push({
+                lifetimeClicks: firebase.database.ServerValue.increment(1)
             });
         }
-                    
+
     </script>
 
     <!-- Optional JavaScript -->
@@ -68,7 +87,6 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <script src='config.js'></script>
-    <script src='index.js' type="module"></script>
 </body>
 
 </html>
