@@ -67,12 +67,12 @@
             event.preventDefault();
             firebase.database().ref(deviceID).set({
                 clickBool: true,
-                lifetimeClicks: int.increment(1)
+                lifetimeClicks: increment(1)
 
             });
-            // var userRef = firebase.database().ref(deviceID);
+            // var userRef = firebase.database().ref("log");
             // userRef.set({
-            //     lifetimeClicks: increment(1)
+            //     lifetimeClicks:   firebase.database.ServerValue.increment(1)
             // });
         }
 
