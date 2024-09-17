@@ -70,7 +70,7 @@
             });
             var userRef = firebase.database().ref(deviceID);
             userRef.push({
-                lifetimeClicks: firebase.database.ServerValue.increment(1)
+                lifetimeClicks: ServerValue.increment(1)
             });
         }
 
