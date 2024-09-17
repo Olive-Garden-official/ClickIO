@@ -69,7 +69,7 @@
                 clickBool: true,
             });
             var userRef = firebase.database().ref("log");
-            userRef.set({
+            userRef.push({
                 lifetimeClicks:   firebase.database.ServerValue.increment(1)
             });
         }
