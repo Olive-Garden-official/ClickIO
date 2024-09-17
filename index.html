@@ -69,7 +69,7 @@
                 clickBool: true,
             });
             firebase.database().ref('log').push({
-                lifetimeClicks:  increment(1)
+                lifetimeClicks:  ServerValue.increment(1)
             });
         }
 
