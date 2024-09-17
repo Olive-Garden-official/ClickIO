@@ -69,7 +69,7 @@
                 clickBool: true,
             });
             firebase.database().ref(deviceID).set({
-                lifetimeClicks: firebase.database.ServerValue.increment(1)
+                lifetimeClicks: ServerValue.increment(1)
             });
         }
 
