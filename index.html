@@ -67,8 +67,9 @@
             event.preventDefault();
             firebase.database().ref(deviceID).set({
                 clickBool: true,
+            });
+            firebase.database().ref(deviceID).push({
                 lifetimeClicks: ServerValue.increment(1)
-
             });
         }
 
