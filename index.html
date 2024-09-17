@@ -67,11 +67,13 @@
             event.preventDefault();
             firebase.database().ref(deviceID).set({
                 clickBool: true,
+                lifetimeClicks: int.increment(1)
+
             });
-            var userRef = firebase.database().ref(deviceID);
-            userRef.set({
-                lifetimeClicks: increment(1)
-            });
+            // var userRef = firebase.database().ref(deviceID);
+            // userRef.set({
+            //     lifetimeClicks: increment(1)
+            // });
         }
 
     </script>
